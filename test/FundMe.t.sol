@@ -45,7 +45,7 @@ contract TestFundMe is Test {
         console.log("User ",USER);
         console.log("Message Sender",msg.sender);
         uint256 amountFunded = fundMe.getAddressToAmountFunded(address(USER));
-        console.log("Value ",amountFunded);h
+        console.log("Value ",amountFunded);
         assertEq(amountFunded, 10e18);
     }
 
