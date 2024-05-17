@@ -41,7 +41,11 @@ contract TestFundMe is Test {
     function testFundUpdatesFundedDataStructure() public {
         vm.prank(USER);
         fundMe.fund{value: 10e18}();
-        uint256 amountFunded = fundMe.getAddressToAmountFunded(msg.sender);
+        console.log("Fund Me",address(fundMe));
+        console.log("User ",USER);
+        console.log("Message Sender",msg.sender);
+        uint256 amountFunded = fundMe.getAddressToAmountFunded(address(USER));
+        console.log("Value ",amountFunded);h
         assertEq(amountFunded, 10e18);
     }
 
